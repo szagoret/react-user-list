@@ -8,8 +8,8 @@ export default function (state = [], action) {
         case ADD_USER:
             return [action.payload, ...state];
         case REMOVE_USER:
-            const newUserList = _.filter(state.payload, (user, index) => index !== action.inde)
-            return [newUserList, ...state];
+            const newUserList = _.filter(state, (user, index) => index !== action.payload);
+            return newUserList;
         default:
             return state;
     }

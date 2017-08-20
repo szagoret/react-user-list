@@ -6,14 +6,18 @@ import { removeUser } from "../actions/index";
 class User extends Component {
     constructor(props) {
         super(props);
-        this.removeUser = this.removeUser.bind(this);
+        this.onButtonClick = this.onButtonClick.bind(this);
+    }
+
+    onButtonClick() {
+        this.props.removeUser(this.props.id);
     }
 
     render() {
         return (
             <li>
                 {this.props.firstName}
-                <button onClick={this.props.removeUser(this.props)}>Remove</button>
+                <button onClick={this.onButtonClick}>Remove</button>
             </li>
         );
     }
