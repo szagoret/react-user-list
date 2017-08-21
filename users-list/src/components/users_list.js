@@ -10,18 +10,18 @@ class UsersList extends Component {
     componentDidMount() {
         this.props.fetchUsers();
     }
- 
+
     render() {
 
         const usersList = this.props.users.map((user, index) => {
             return (
-                <User key={index} id={index} {...user}/>
+                <User key={index} id={index} {...user} />
             );
         });
 
 
         return (
-            <ul>
+            <ul className="list-group m-2">
                 {usersList}
             </ul>
         );

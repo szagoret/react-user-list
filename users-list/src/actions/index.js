@@ -3,10 +3,10 @@ export const ADD_USER = 'add_user';
 export const REMOVE_USER = "remove_user";
 
 const userList = [
-    { firstName: "Tudor", lastName: 'Orbey' },
-    { firstName: "Vasile", lastName: 'Cortion' },
-    { firstName: "Ion", lastName: 'Trindan' },
-    { firstName: "Corina", lastName: 'Vladis' }
+    { firstName: "Tudor", lastName: 'Orbey', email:"torbet@example.com" },
+    { firstName: "Vasile", lastName: 'Cortion', email:"vasile@example.com" },
+    { firstName: "Ion", lastName: 'Trindan', email:"ion@example.com" },
+    { firstName: "Corina", lastName: 'Vladis', email:"corina@example.com" }
 ];
 
 export function fetchUsers() {

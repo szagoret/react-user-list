@@ -15,9 +15,16 @@ class User extends Component {
 
     render() {
         return (
-            <li>
-                {this.props.firstName}
-                <button onClick={this.onButtonClick}>Remove</button>
+            <li className="list-group-item list-group-item-action">
+                <span>
+                    {this.props.firstName}  {this.props.lastName}
+                    <p className="font-italic mb-1">
+                        {this.props.email}
+                    </p>
+                </span>
+                <div className="ml-auto">
+                    <button className="btn btn-sm btn-danger" onClick={this.onButtonClick}><i className="fa fa-trash-o" aria-hidden="true"></i></button>
+                </div>
             </li>
         );
     }
